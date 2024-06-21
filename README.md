@@ -1,2 +1,4 @@
-cra
-configured tailwind
+# Netflix-GPT
+
+- create react app
+- configured tailwind
