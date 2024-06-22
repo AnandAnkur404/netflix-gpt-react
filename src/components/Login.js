@@ -13,8 +13,10 @@ const Login = () => {
       <form action="" className="p-12 relative">
         <input type="Email" placeholder="Enter Email Address" className="p-2 m-2" />
         <input type="password" placeholder="Enter password" className="p-2 m-2" />
-        <button className="p-2 m-2 bg-white">Sign In</button>
         
+        <button className="p-2 m-2 bg-white">Sign In</button>
+        <button className="p-2 m-2 bg-white">Sign In</button>
+
       </form>
     </div>
   );
