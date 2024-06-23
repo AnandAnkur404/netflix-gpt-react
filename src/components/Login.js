@@ -2,6 +2,11 @@ import React from "react";
 import Header from "./Header";
 
 const Login = () => {
+
+  const toggleSignUpForm  = () =>{
+
+  }
+
   return (
     <div>
       <Header />
@@ -17,7 +22,7 @@ const Login = () => {
         <input type="password" placeholder="Enter password" className="p-4 my-2 w-full bg-gray-700" />
         
         <button className="p-4 my-6 bg-red-700 w-full rounded-lg">Sign In</button>
-        <p>New to Netflix? Sign Up Now</p>
+        <p className="py-4" onClick={toggleSignUpForm}>New to Netflix? Sign Up Now</p>
       </form>
     </div>
   );
