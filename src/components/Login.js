@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Header from "./Header";
 
 const Login = () => {
+  const [isSignInForm, setIsSignInForm] = useState(true);
 
-  const toggleSignUpForm  = () =>{
-
-  }
+  const toggleSignUpForm = () => {
+    setIsSignInForm(!isSignInForm);
+  };
 
   return (
     <div>
@@ -17,12 +18,37 @@ const Login = () => {
         />
       </div>
       <form className="p-12 absolute w-3/12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-75">
-        <h1 className="font-bold text-3xl py-4">Sign In</h1>
-        <input type="Email" placeholder="Enter Email Address" className="p-4 my-2 w-full bg-gray-700" />
-        <input type="password" placeholder="Enter password" className="p-4 my-2 w-full bg-gray-700" />
-        
-        <button className="p-4 my-6 bg-red-700 w-full rounded-lg">Sign In</button>
-        <p className="py-4" onClick={toggleSignUpForm}>New to Netflix? Sign Up Now</p>
+        <h1 className="font-bold text-3xl py-4">
+          {isSignInForm ? "Sign In" : "Sign Up"}
+        </h1>
+
+        {!isSignInForm && (
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="p-4 my-2 w-full bg-gray-700"
+          />
+        )}
+
+        <input
+          type="Email"
+          placeholder="Email Address"
+          className="p-4 my-2 w-full bg-gray-700"
+        />
+        <input
+          type="password"
+          placeholder="Enter password"
+          className="p-4 my-2 w-full bg-gray-700"
+        />
+
+        <button className="p-4 my-6 bg-red-700 w-full rounded-lg">
+          {isSignInForm ? "Sign In" : "Sign Up"}
+        </button>
+        <p className="py-4 cursor-pointer" onClick={toggleSignUpForm}>
+          {isSignInForm
+            ? "New to Netflix? Sign Up Now"
+            : "Already registred? Sign In Now"}
+        </p>
       </form>
     </div>
   );
