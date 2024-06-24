@@ -3,8 +3,12 @@
 - create react app
 - configured tailwind
 - Header
+- App routing
 - Login form
 - Sign Up form
+- Form validation
+- UseRef Hook
+
 
 # Features
 
