@@ -6,13 +6,13 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
   const handleButtonClick = () => {
     // validate the form data
-    console.log(email.current.value);
-    console.log(password.current.value);
+    
     const message = checkValidData(email.current.value,password.current.value)
     setErrorMessage(message);
   };
@@ -40,6 +40,7 @@ const Login = () => {
 
         {!isSignInForm && (
           <input
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="p-4 my-2 w-full bg-gray-700"
@@ -59,7 +60,7 @@ const Login = () => {
           className="p-4 my-2 w-full bg-gray-700"
         />
 
-        <p className="text-red-500">{errorMessage}</p>
+        <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
         <button
           className="p-4 my-6 bg-red-700 w-full rounded-lg"
           onClick={handleButtonClick}
