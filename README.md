@@ -17,6 +17,8 @@
 
 - Deploying our to production
 
+- Create SignUp user account in firebase
+
 # Features
 
 - Login/Sign Up
