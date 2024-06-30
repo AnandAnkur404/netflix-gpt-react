@@ -5,7 +5,6 @@ import { auth } from "../utils/firebase";
 
 import { checkValidData } from "../utils/validate";
 
-
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
